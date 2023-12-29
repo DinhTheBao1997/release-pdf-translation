@@ -11,3 +11,4 @@ torch
 protobuf
 django
 gunicorn
+django-environ
