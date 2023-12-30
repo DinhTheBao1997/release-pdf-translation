@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # SQLite
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
@@ -140,47 +140,5 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',
 ]
 
-# LOGGING = {
-#     'version': 1,                       # the dictConfig format version
-#     'disable_existing_loggers': False,  # retain the default loggers
-#     'handlers': {
-#         'file': {
-#             'class': 'logging.FileHandler',
-#             'filename': 'general.log',
-#             'level': 'DEBUG',
-#             'formatter': 'verbose',
-#         },
-#     },
-#     'loggers': {
-#         'my_app': {
-#         '': {
-#             'level': 'DEBUG',
-#             'handlers': ['file'],
-#         },
-#         },
-#     },
-#     'formatters': {
-#         'verbose': {
-#             'format': '{name} {levelname} {asctime} {module} {process:d} {thread:d} {message}',
-#             'style': '{',
-#         },
-#         'simple': {
-#             'format': '{levelname} {message}',
-#             'style': '{',
-#         },
-#     },
-# }
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['POSTGRES_DB'],
-        'USER': os.environ['POSTGRES_USER'],
-        'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-        'HOST': 'db',
-        'POST': '5432',
-    }
-}
