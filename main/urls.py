@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.urls import include, path, re_path
 from .views import index
-from django.conf.urls import url
 from django.conf import settings
 from django.views.static import serve
 
