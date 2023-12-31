@@ -137,12 +137,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000/",
-    "https://luanvan.applikuapp.com/",
+    "http://localhost:8000",
+    "https://luanvan.applikuapp.com",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8000/"
-    "https://luanvan.applikuapp.com/"
+    "https://luanvan.applikuapp.com"
 ]
 
 STATIC_URL = "/static/"
