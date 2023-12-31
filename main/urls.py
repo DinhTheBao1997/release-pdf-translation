@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.urls import include, path
 from .views import index
+from django.conf.urls import url
+from django.conf import settings
+from django.views.static import serve
 
 urlpatterns = [
     path("", index),
     path("pdf-translation/", include("pdf_translation.urls")),
+    url(r'^static/(?P<path>.*)$', serve, {"document_root":settings.STATIC_ROOT}),
 ]
