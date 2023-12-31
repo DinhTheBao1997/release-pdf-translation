@@ -138,6 +138,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',
+    "https://pdftranslation.applikuapp.com",
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://pdftranslation.applikuapp.com",
 ]
 
 STATIC_URL = "/static/"
