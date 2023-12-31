@@ -140,7 +140,5 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',
 ]
 
-# STATIC_URL = "/static/"
-# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATIC_ROOT = os.environ.get('STATIC_ROOT', BASE_DIR / 'staticfiles')  
-STATIC_URL = os.environ.get('STATIC_URL', '/static/')
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
