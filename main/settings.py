@@ -35,7 +35,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "pdftranslation.applikuapp.com,127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "luanvan.applikuapp.com,127.0.0.1,localhost").split(",")
 
 # Application definition
 
@@ -137,12 +137,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:4200',
-    "https://pdftranslation.applikuapp.com",
+    "http://localhost:8000/",
+    "https://luanvan.applikuapp.com/",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://pdftranslation.applikuapp.com",
+    "http://localhost:8000/"
+    "https://luanvan.applikuapp.com/"
 ]
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+CSRF_USE_SESSIONS = False
+FONT_DIR = os.path.join(BASE_DIR, "staticfiles", "fonts/times/times.ttf")

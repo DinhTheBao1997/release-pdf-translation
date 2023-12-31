@@ -1,10 +1,11 @@
 from fpdf import FPDF
 from fpdf.py3k import PY3K
+from main.settings import FONT_DIR
 
 class CustomFPDF(FPDF):
     def config(self):
         self.compress = False
-        self.add_font('times', '', './static/fonts/times/times.ttf', uni=True) 
+        self.add_font('times', '', FONT_DIR, uni=True) 
         pass
 
     def output(self):
