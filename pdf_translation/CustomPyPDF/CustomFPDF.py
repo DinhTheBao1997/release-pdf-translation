@@ -6,9 +6,9 @@ import os
 class CustomFPDF(FPDF):
     def config(self):
         self.compress = False
-        path=os.path.join(os.getenv('STATIC_ROOT'), "fonts/times/times.ttf")
-        print("path: %s" % path)
-        self.add_font('times', '',path, uni=True) 
+        # path=os.path.join(os.getenv('STATIC_ROOT'), "fonts/times/times.ttf")
+        print("path: %s" % FONT_DIR)
+        self.add_font('times', '',"times.ttf", uni=True) 
         pass
 
     def output(self):
