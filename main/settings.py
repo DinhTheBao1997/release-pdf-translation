@@ -140,7 +140,7 @@ CSRF_TRUSTED_ORIGINS = [
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 CSRF_USE_SESSIONS = False
-FONT_DIR = os.path.join(STATIC_ROOT, "fonts/times/times.ttf")
+FONT_DIR = os.path.join(os.getenv('STATIC_ROOT'), "fonts/times/times.ttf")
 
 # STATICFILES_DIRS = (
 #   os.path.join(BASE_DIR, 'staticfiles/'),
