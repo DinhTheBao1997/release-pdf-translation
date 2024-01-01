@@ -15,3 +15,4 @@ backend/**/*.log
 *.pkl
 *.pdf
 venv
+__pycache__
